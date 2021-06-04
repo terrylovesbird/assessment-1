@@ -21,9 +21,9 @@ def optimal_change(item_cost, amount_paid):
 
     #some edge or special cases, like you dont pay or pay is less than the cost, also when exact pay w/o any change needed
     if change < 0:
-        answer += 'Please pay with enough amount!'
+        answer = 'Please pay with enough amount!'
     elif change == 0:
-        answer += 'No changes needed!'
+        answer = 'No changes needed!'
     
     #when change > 0, compare the change through the denos dict
     elif change > 0:

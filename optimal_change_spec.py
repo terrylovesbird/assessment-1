@@ -5,10 +5,10 @@ from optimal_change import optimal_change
 class TestOptimalChange(unittest.TestCase):
     #test edge and special cases
     def test_exact_pay(self):
-        self.assertTrue(optimal_change(51.53, 51.53) == "The optimal change for an item that costs $51.53 with an amount paid of $51.53 is No changes needed!")
+        self.assertTrue(optimal_change(51.53, 51.53) == "No changes needed!")
 
     def test_no_enough_pay(self):
-        self.assertTrue(optimal_change(9.87, 0) == "The optimal change for an item that costs $9.87 with an amount paid of $0 is Please pay with enough amount!")
+        self.assertTrue(optimal_change(9.87, 0) == "Please pay with enough amount!")
 
     def test_single_domination_1(self):
         self.assertEqual(optimal_change(50, 100), "The optimal change for an item that costs $50 with an amount paid of $100 is 1 $50 bill.")
@@ -25,6 +25,6 @@ class TestOptimalChange(unittest.TestCase):
 
     def test_normal_cases_3(self):
         self.assertEqual(optimal_change(0.01, 99), "The optimal change for an item that costs $0.01 with an amount paid of $99 is 1 $50 bill, 2 $20 bills, 1 $5 bill, 3 $1 bills, 3 quarters, 2 dimes, and 4 pennies.") 
-              
+
 if __name__ == '__main__':
     unittest.main()
